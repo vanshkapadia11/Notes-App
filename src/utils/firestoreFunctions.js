@@ -12,13 +12,12 @@ import {
 import { serverTimestamp } from "firebase/firestore";
 import { arrayUnion } from "firebase/firestore";
 
-export const saveNote = async (uid, content) => {
+export const saveNote = async (uid, note) => {
   const userRef = doc(db, "todoUsers", uid);
 
   try {
     await updateDoc(userRef, {
-      notes: content, // this will save the note as a field named 'notes'
-      updatedAt: serverTimestamp(),
+      notes: arrayUnion(note),
     });
     console.log("✅ Note saved successfully as a field!");
   } catch (err) {
