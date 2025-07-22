@@ -14,7 +14,13 @@ h1.title {
   border-bottom: 1px solid #e0e0e0;
   padding-bottom: 0.5rem;
 }
-.note-title {
+.note-desc {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+.ProseMirror .note-title {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1.5rem;

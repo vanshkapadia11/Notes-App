@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useEditor, EditorContent } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import Underline from "@tiptap/extension-underline";
@@ -106,6 +106,9 @@ const NoteEditor = () => {
   });
 
   const handleSave = async () => {
+    // if (!isChanged) {
+    //   return;
+    // }
     console.log("🧪 Inside handleSave");
 
     if (!editor) {
